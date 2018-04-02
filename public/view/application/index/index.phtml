@@ -1,0 +1,84 @@
+<div class="clearfix"></div>
+<div ng-controller="index">
+<div class="top_banner">
+  <div class="container">
+    <div class="row"> <a class="_1Wnte _1qW-l"><i class="icon-back _1An_C"></i></a> <a class="_1Wnte _12MuM"><i class="icon-back _2ByCT"></i></a>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="img-cont bg1">
+          <div class="img-cont-over"></div>
+          <div class="title-cont">
+            <h3 class="offer-title">15% OFF on</h3>
+            <h4 class="test-title" style="">individual Lab Tests</h4>
+            <p>Doorstep service available across Chennai</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="img-cont bg2">
+          <div class="img-cont-over"></div>
+          <div class="title-cont">
+            <h3 class="offer-title">15% OFF on</h3>
+            <h4 class="test-title" style="">individual Lab Tests</h4>
+            <p>Doorstep service available across Chennai</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="img-cont bg3">
+          <div class="img-cont-over"></div>
+          <div class="title-cont">
+            <h3 class="offer-title">15% OFF on</h3>
+            <h4 class="test-title" style="">individual Lab Tests</h4>
+            <p>Doorstep service available across Chennai</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="container-fluid">
+  <div class="lab-cont">
+    <div class="lab-cont-head">Laboretary near by you</div>
+    <div class="mt0">
+      <div class="lab-cont-inner">
+          <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="labs in testLabList">
+              <div class="lab-cont-inner_A"> 
+                  <a href="#" class="lab-cont-inner_A-cont">
+                      <div class="lab-cont-inner_A-padd">
+                          <div class="lab-cont-inner_A-img">
+                              <div class="lab-cont-img_cont"> 
+                                  <img class="_2tuBw _12_oN" alt="Chai Point" width="254" height="160" src="<?php echo $this->basePath() ?>/public/images/dummylab.jpg"></div>
+                              <div class="exclusive">
+                                  <div class="exclusive-text">Exclusive</div>
+                              </div>
+                              <div class="mt14">
+                                  <div class="lab-title">{{labs.lab_name}}</div>
+                                  <div class="lab-sub-title" title="{{labs.lab_name}}">{{labs.lab_address}}</div>
+                              </div>
+                              <div class="detail-cont">
+                                  <div class="detail-cont_inner green-bg"><span class="fa fa-star icon-star_size"></span><span>4.4</span></div>
+                                  <div>•</div>
+                                  <div>{{formatNumber(labs.lab_distance)}} K.m</div>
+                                  <div>•</div>
+                                  <!--<div class="price"><i class="fa fa-rupee"></i> 300 FOR TWO Test</div>-->
+                              </div>
+                              <div class="offer-cont"><span class="fa fa-certificate certificate-size" ng-if="labs.discount_type =='percent'">
+                                    <i class="fa-percent fa percentage"></i>
+                                    </span><span class="sNAfh">{{labs.discount_value}} on all orders</span>
+                              </div>
+                          </div>
+                          <div class="view_btn"><span role="button" aria-label="Open" class="_2ECk4 _24tlh">Quick View</span></div>
+                      </div>
+                  </a> 
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+    <div style="position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.3); z-index: 99999999; width: 100%; height: 100%;"  ng-show="ajaxLoadingData">
+        <img style=" background-color: white;position: absolute; top: 40%; left: 45%; width: 250px; " alt="loader" src="<?= $this->basePath() ?>/public/images/loader.jpg">
+    </div>
+</div>
+</div>
+<script src="<?php echo $this->basePath() . '/public/js/frontend/index.js' ?>"></script>
