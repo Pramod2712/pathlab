@@ -39,15 +39,7 @@ class Module
         if ($session->offsetExists('city')) {
             $GLOBALS['city'] = $session->city;
         }        
-        if ($session->offsetExists('category_list')) {
-            $GLOBALS['category_list'] = $session->category_list;
-        }        
-        if ($session->offsetExists('marchant_list')) {
-            $GLOBALS['marchant_list'] = $session->marchant_list;
-        }               
-        if ($session->offsetExists('banner')) {
-            $GLOBALS['banner'] = $session->banner;
-        }         
+                 
     }    
     public function getConfig()
     {
